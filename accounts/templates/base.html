@@ -27,20 +27,18 @@
                 </li> {% endcomment %}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'view_profile' %}">Profile</a>
+                    <a class="nav-link" href="{%  url 'accounts:view_profile' %}">Profile</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'edit_profile' %}">Edit Profile</a>
+                    <a class="nav-link" href="{%  url 'accounts:edit_profile' %}">Edit Profile</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'change_password' %}">Change Password</a>
+                    <a class="nav-link" href="{%  url 'accounts:change_password' %}">Change Password</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'password_reset' %}">Reset Password</a>
-                </li>
+                
 
                 {% comment %} <li class="nav-item">
                     <a class="nav-link" href="/account/register">Register</a>
@@ -51,20 +49,22 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'logout' %}">Logout</a>
+                    <a class="nav-link" href="{%  url 'accounts:logout' %}">Logout</a>
                 </li>
             </ul>
             {%  else %}
             <ul class="navbar-nav mr-auto">
-                
+                <li class="nav-item">
+                    <a class="nav-link" href="{%  url 'accounts:password_reset' %}">Reset Password</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'login' %}">Login</a>
+                    <a class="nav-link" href="{%  url 'accounts:login' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{%  url 'register' %}">Register</a>
+                    <a class="nav-link" href="{%  url 'accounts:register' %}">Register</a>
                 </li>
             </ul>
 

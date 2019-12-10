@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm,PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 # Create your views here.
 # @login_required 
@@ -18,7 +19,7 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/account') 
+            return redirect(reverse('accounts:home')) 
     else:
         form=RegistrationForm()
 
